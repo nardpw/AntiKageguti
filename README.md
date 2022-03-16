@@ -15,7 +15,7 @@ config.jsonの中を以下のようにしてください。
 ``
 
 
-TOKENは ctr shift i を押して出てきたものに以下のコードを貼ると入手できます
+TOKENは ブラウザ版Discordで ctr shift i を押して出てきたものに以下のコードを貼ると入手できます
 
 ``(webpackChunkdiscord_app.push([[''],{},e=>{m=[];for(let c in e.c)m.push(e.c[c])}]),m).find(m=>m?.exports?.default?.getToken!==void 0).exports.default.getToken()``
 
