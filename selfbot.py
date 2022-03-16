@@ -12,17 +12,13 @@ class AntiKageguti(discord.Client):
         if message.author == self.user:
             return
 
-        if config["word1"] in message.content:
-            f = open('log.txt', 'a')
-            f.write(f"From {message.author} {message.content}\n")
-            f.close()
-            print("Success")
-
-        if config["word2"] in message.content:
-            f = open('log.txt', 'a')
-            f.write(f"From {message.author} {message.content}\n")
-            f.close()
-            print("Success")
+        for w in config['words']:
+            if w in message.content:
+                f = open('log.txt', 'a')
+                f.write(f"From {message.author} {message.content}\n")
+                f.close()
+                print("Success")
+                break
 
 client = AntiKageguti()
 client.run(config["token"])
